@@ -33,6 +33,12 @@
       "metadata": {
         "description": "VM size"
       }
+    },
+    "myVMName": {
+      "type": "string",
+      "metadata": {
+        "description": "Name for the Virtual Machine."
+      }
     }
   },
   "variables": {
@@ -41,7 +47,7 @@
     "imageOffer": "CoreOS",
     "imageSKU": "Stable",
     "nicName": "networkInterface1",
-    "vmName": "vm1",
+    "vmName": "[parameters('myVMName')]",
     "virtualNetworkName": "virtualNetwork1",
     "publicIPAddressName": "publicIp1",
     "addressPrefix": "10.0.0.0/16",
